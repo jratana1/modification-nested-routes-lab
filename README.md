@@ -29,3 +29,4 @@ along with a `song` instance.
    artist's `songs` collection. Redirect to `/artists/:artist_id/songs` if not.
 7. Make sure all tests pass!
 
+<h3> by <%= link_to @song.artist.name, artist_path(@song.artist) if @song.artist %> (<%= link_to "Edit Song", edit_artist_song_path(@song.artist, @song) if @song.artist %>)</h3>
